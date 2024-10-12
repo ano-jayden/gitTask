@@ -1,0 +1,34 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+env/
+venv/
+ENV/
+.venv/
+*.env
+
+# Django migrations
+*/migrations/
+*.sqlite3
+
+# Media files
+media/
+
+# Static files
+staticfiles/
+
+# Logs
+*.log
+
+# Local configuration files
+local_settings.py
+
+# IDE/editor specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
