@@ -44,7 +44,21 @@ def skills_list(request):
 
 
 def contact(request):
+    """
+    Handles the contact page view.
+
+    This function renders the contact page of the website when a user 
+    navigates to the 'contact' URL. It uses the 'main/contact.html' template
+    to generate the page.
+
+    Parameters:
+    request (HttpRequest): The HTTP request object.
+
+    Returns:
+    HttpResponse: The rendered contact page as an HTTP response.
+    """
     return render(request, 'main/contact.html')
+
 
 def news(request):
     return render(request, 'main/news.html')
