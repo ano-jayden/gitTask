@@ -1,7 +1,7 @@
 # gitTask
 
 ## Your Django App Name
-Welcome to Your Django App! This application is designed to [briefly describe what your app does, e.g., manage skills, facilitate user registration, etc.].
+Welcome to platestudios app This application is designed to  manage skills, facilitate user registration, etc.
 
 ## Table of Contents
 - [Features](#features)
