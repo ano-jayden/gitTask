@@ -92,3 +92,53 @@ from .models import Skill
 def skills_list(request):
     skills = Skill.objects.all()  
     return render(request, 'main/skills_list.html', {'skills': skills}) 
+
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
+from django.contrib import messages
+from django.contrib.auth.forms import AuthenticationForm
+
+def user_login(request):
+    if request.method == 'POST':
+        # Using Django's built-in AuthenticationForm to validate login credentials
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            # Cleaned data contains the username and password
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            # Authenticate user
+            user = authenticate(request, username=username, password=password)
+            if user is not None:
+                # Log the user in
+                login(request, user)
+                return redirect('user_auth:show_user')  # Redirect to a user profile page after login
+            else:
+                messages.error(request, "Invalid username or password.")
+        else:
+            messages.error(request, "Invalid username or password.")
+    
+    else:
+        # If it's a GET request, render the form for the login page
+        form = AuthenticationForm()  # Empty form for GET request
+
+    return render(request, 'authentication/login.html', {'form': form})
+
+
+def user_login_custom(request):
+    if request.method == 'POST':
+        # Extracting the username and password from custom fields in POST request
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        # Authenticate the user
+        user = authenticate(request, username=username, password=password)
+        
+        if user is not None:
+            # Log the user in
+            login(request, user)
+            return redirect('user_auth:show_user')  # Redirect to profile page
+        else:
+            messages.error(request, "Invalid username or password.")
+    
+    # If it's a GET request or the login fails, re-render the login form
+    return render(request, 'authentication/login.html')
