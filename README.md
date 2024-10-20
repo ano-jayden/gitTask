@@ -4,15 +4,15 @@
 Welcome to platestudios app This application is designed to  manage skills, facilitate user registration, etc.
 
 ## Table of Contents
-- [Features](#features)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Running the Development Server](#running-the-development-server)
-- [Database Setup](#database-setup)
-- [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
+- [Features]
+- [Requirements]
+- [Installation]
+- [Usage]
+- [Running the Development Server]
+- [Database Setup]
+- [Testing]
+- [Contributing]
+
 
 ## Features
 - User registration and authentication
@@ -34,5 +34,14 @@ Make sure you have the following installed:
    ```bash
    git clone https://github.com/ano-jayden/gitTask
    cd gitTask
+   python -m venv venv
+   venv\Scripts\activate(windows)
+   source venv/bin/activate(mac os)
+   pip install -r requirements.txt
+
+##Usage
+   python manage.py runserver
+
+
 
 
