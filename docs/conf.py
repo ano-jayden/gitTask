@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'doc'
+project = 'documentation'
 copyright = '2024, ano'
 author = 'ano'
 release = '1.0'
@@ -27,9 +27,10 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_theme = 'alabaster'
 html_static_path = ['_static']
 
+
 import os
 import sys
 import django
 sys.path.insert(0, os.path.abspath('..'))
-os.environ['DJANGO_SETTINGS_MODULE'] = 'plate'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'plate.settings'
 django.setup()

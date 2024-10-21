@@ -1,6 +1,15 @@
 plate package
 =============
 
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   plate.main
+   plate.plate
+
 Submodules
 ----------
 
@@ -8,6 +17,22 @@ plate.asgi module
 -----------------
 
 .. automodule:: plate.asgi
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+plate.conf module
+-----------------
+
+.. automodule:: plate.conf
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+plate.manage module
+-------------------
+
+.. automodule:: plate.manage
    :members:
    :undoc-members:
    :show-inheritance:
